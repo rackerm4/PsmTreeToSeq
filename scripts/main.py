@@ -6,10 +6,10 @@ import os
 import sys
 import time
 import dendropy
-
-from scripts import config_load
 import tempfile
 # import _thread as thread
+
+from scripts import config_load
 from dendropy.model import protractedspeciation
 from dendropy.interop import seqgen
 
@@ -26,7 +26,7 @@ def main():
                         help='Tree schema: Newick, Nexus')
     parser.add_argument('--override', '-r', action='store_true', required=False, help='Overrides existing files.')
     parser.add_argument('--profile', '-p', default="default", required=True, help='')
-    parser.add_argument('--num_runs', '-n', type=int, required=False, help='')
+    parser.add_argument('--num_runs', '-n', default=1, type=int, required=False, help='')
     # parser.set_defaults(func=load_config)
 
     args = parser.parse_args()
@@ -54,15 +54,7 @@ def main():
             # print("Finished.")
             # print('\nProcess took %.2f seconds to complete.' % (time.perf_counter() - start))
     except BaseException as e:
-        print("Err0rr")
-
-    # lineage_path = tree_data_gen.file_output(get_trees[0], args, "lineage")
-    # orthospecies_path = tree_data_gen.file_output(get_trees[1], args, "orthospecies")
-
-    # lade profil => default.yaml
-    # leite profildaten an tree_data_gen
-    # tree_data_gen erstellt num_runs* trees
-    # seq gen starten mit trees in tree ordner
+        print(e)
 
 
 def temp_file_name():

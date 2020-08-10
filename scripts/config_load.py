@@ -10,14 +10,6 @@ class Profile:
     def __init__(self, profile):
         self.profile = profile
 
-    # def get_random_file_name(self, file, schema):
-    #     temp_file_name() + tree_names[i] + "." + str(args.schema)
-    #     random_filename = next(tempfile._get_candidate_names())
-    #     return random_filename
-    #
-    # def get_save_path(self):
-    #     save_path =
-
     def get_path(self):# 'scripts',  <= ADD FOR DOCKER
         cfg_path = os.path.join(os.getcwd(), 'profiles', self.profile + '.yaml')
         return cfg_path
