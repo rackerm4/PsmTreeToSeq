@@ -11,14 +11,15 @@ class Profile:
         self.profile = profile
 
     def get_path(self):# 'scripts',  <= ADD FOR DOCKER
-        cfg_path = os.path.join(os.getcwd(), 'profiles', self.profile + '.yaml')
+        cfg_path = os.path.join(os.getcwd(), 'scripts', 'profiles', self.profile + '.yaml')
         return cfg_path
 
     def cfg_load(self):
         path = self.get_path()
+        print(self.get_path())
         if not os.path.isfile(path):
             print("Config file does not exist.")
-            sys.exit(1)
+            sys.exit()
         with open(path) as f:
             config = yaml.safe_load(f)
         return config
@@ -38,7 +39,7 @@ class Profile:
             for arg in vital:
                 if arg not in psp:
                     print("Missing ProtractedSpeciationProcess argument: " + arg + " in file " + self.get_path())
-                    sys.exit(1)
+                    sys.exit()
             values_protractedspeciationprocess = psp
             return values_protractedspeciationprocess
         else:

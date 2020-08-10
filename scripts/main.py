@@ -9,7 +9,7 @@ import dendropy
 import tempfile
 # import _thread as thread
 
-from scripts import config_load
+import config_load as cl
 from dendropy.model import protractedspeciation
 from dendropy.interop import seqgen
 
@@ -27,12 +27,10 @@ def main():
     parser.add_argument('--override', '-r', action='store_true', required=False, help='Overrides existing files.')
     parser.add_argument('--profile', '-p', default="default", required=True, help='')
     parser.add_argument('--num_runs', '-n', default=1, type=int, required=False, help='')
-    # parser.set_defaults(func=load_config)
 
     args = parser.parse_args()
     args.parser = parser
-    # config = args.func(args.profile)
-    config = config_load.Profile(args.profile)
+    config = cl.Profile(args.profile)
 
     start = time.perf_counter()
     # thread.start_new_thread(waiting_std_output, (20, 0.5))
@@ -43,7 +41,7 @@ def main():
         for _ in range(args.num_runs):
             # getting trees
             get_trees = call_sample_tree(args, config)
-            print("\nTree files finished.")
+            #print("\nTree files finished.")
             # saving trees
             file_output(get_trees, args, ["lineage", "orthospecies"])
 
@@ -100,16 +98,19 @@ def call_sample_tree(args, config):
 
 def file_output(trees, args, tree_names):
     """Stores output files."""
-    output_dir = args.output + '/trees'
+
+    output_dir =  os.path.join(os.getcwd(), 'scripts', args.output + '/trees')
+    #output_dir =  + args.output + '/trees'
+    print(output_dir)
     # sanity check
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     if not os.path.isdir(output_dir):
-        sys.exit(1)
+        sys.exit()
     for i in range(len(trees)):
         try:
             filename = tree_names[i] + '_' + temp_file_name() + "." + str(args.schema)
-            tmp_path = os.path.join(os.getcwd(), output_dir, filename)
+            tmp_path = os.path.join(output_dir, filename)
             trees[i].write_to_path(tmp_path, suppress_edge_lengths=True,
                                    schema=args.schema)
         except BaseException as e:
