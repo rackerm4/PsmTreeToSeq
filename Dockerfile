@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set entrypoint to pass arguments
-ENTRYPOINT ["python", "/app/scripts/main.py"]
+ENTRYPOINT ["python", "/app/src/main.py"]

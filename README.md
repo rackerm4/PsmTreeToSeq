@@ -1,17 +1,14 @@
 # pspTSGen
 
  Currently not working.
- Wrong paths.
-
 
 ### Installation & Docker
 
-
-
-Install the dependencies and Dependencies and start the server.
+Install the dependencies and start the server.
 
 ```sh
 $ git clone https://github.com/rackerm4/pspTSGen
+
 $ docker build -t pspTSGen .
 
 $ docker run pspTSGen --profile default --num_runs <N> --schema newick --output data
@@ -21,7 +18,7 @@ $ docker run pspTSGen --profile default --num_runs <N> --schema newick --output 
 ### Arguments
 
 
-| Arg | README |
+| Arg | ... |
 | ------ | ------ |
 | --profile | |
 | --num_runs | |
