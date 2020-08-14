@@ -98,7 +98,7 @@ def call_sample_tree(args, config):
         # calling args
         values = gen_sample_values(config.get_generate_sample_values())
         # generate trees
-        print("dfsgdfg")
+        print("Run dismissed.")
         generated_trees = protractedspeciation.ProtractedSpeciationProcess(**config.generate_protracted_speciation_process_values()).generate_sample(**values)
         # generated_trees = protractedspeciation.ProtractedSpeciationProcess(
         #     **config.generate_protracted_speciation_process_values()).generate_sample(**values)
@@ -111,7 +111,6 @@ def call_sample_tree(args, config):
 
 
 def file_output(trees, args, tree_names):
-    print(trees[0])
     """Stores output files."""
     output_dir = args.output
     # sanity check
