@@ -62,6 +62,4 @@ class Loader:
         return self.get_specific_config_values('seq-gen')
 
     def load_headers(self):
-        # h1, h2, h3 = list(self.cfg_load()['ProtractedSpeciationProcess']), list(self.cfg_load()['generate_sample']), \
-        #              list(self.cfg_load()['seq-gen'])
         return list(self.cfg_load()['ProtractedSpeciationProcess']) + list(self.cfg_load()['generate_sample']) + list(self.cfg_load()['seq-gen'])
