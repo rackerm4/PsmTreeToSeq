@@ -11,7 +11,7 @@ generate_sample:
   num_extant_orthospecies:
   num_extant_lineages:
   is_retry_on_total_extinction:
-  max_retries:
+  max_retries: 4
 
 seq-gen:
   state_freqs: [0.4, 0.4, 0.1, 0.1]

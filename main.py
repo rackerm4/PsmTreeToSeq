@@ -37,6 +37,7 @@ def main():
 
     # start
     start = time.perf_counter()
+    c = 0
     for _ in range(args.num_runs):
         # getting values
         # rng_protractedspeciation_values = rng_protractedspeciation_values()
@@ -53,8 +54,13 @@ def main():
             # call_seq_gen(get_trees[1], args, "orthospecies", config)
             parameters_to_txt(config, args, headers)
         except:
+            print("Run dismissed.")
+            c += 1
             pass
+    print('Runs dismissed:',c)
     print('\nProcess took %.2f seconds to complete.' % (time.perf_counter() - start))
+
+
 #
 #
 # def rng_protractedspeciation_values():
@@ -98,8 +104,8 @@ def call_sample_tree(args, config):
         # calling args
         values = gen_sample_values(config.get_generate_sample_values())
         # generate trees
-        print("Run dismissed.")
-        generated_trees = protractedspeciation.ProtractedSpeciationProcess(**config.generate_protracted_speciation_process_values()).generate_sample(**values)
+        generated_trees = protractedspeciation.ProtractedSpeciationProcess(
+            **config.generate_protracted_speciation_process_values()).generate_sample(**values)
         # generated_trees = protractedspeciation.ProtractedSpeciationProcess(
         #     **config.generate_protracted_speciation_process_values()).generate_sample(**values)
         return generated_trees
@@ -107,7 +113,6 @@ def call_sample_tree(args, config):
         print("Maximum number of runs to execute in the event of prematurely-terminated simulations due to all "
               "lineages going extinct. Once this number or re-runs is exceed, then TreeSimTotalExtinctionException "
               "is raised. Defaults to 1000. Set to None to never quit trying.\n" + str(e))
-
 
 
 def file_output(trees, args, tree_names):
