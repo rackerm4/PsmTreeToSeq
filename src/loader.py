@@ -35,8 +35,8 @@ class Loader:
         n = 1  # number of digits after the decimal point
         for i in range(len(vital)):
             rng_values.append(round(random.uniform(0, 1), n))
-        #return {'incipient_species_extinction_rate': 0.2, 'speciation_initiation_from_orthospecies_rate': 0.2, 'speciation_initiation_from_incipient_species_rate': 0.2, 'speciation_completion_rate': 0.2, 'orthospecies_extinction_rate': 0.2, 'aincipient_species_extinction_rate': 0.2}
-        return dict(zip(vital, rng_values))
+        return {'incipient_species_extinction_rate': 0.2, 'speciation_initiation_from_orthospecies_rate': 0.2, 'speciation_initiation_from_incipient_species_rate': 0.2, 'speciation_completion_rate': 0.2, 'orthospecies_extinction_rate': 0.2, 'aincipient_species_extinction_rate': 0.2}
+        #return dict(zip(vital, rng_values))
 
     # old function, reads in parameters from config file 'default.yaml'
     # def generate_protracted_speciation_process_values(self):
