@@ -63,12 +63,13 @@ The reconstructed tree in the lineage-based model of protracted speciation
 Seq-Gen: an application for the Monte Carlo simulation of DNA sequence evolution along phylogenetic trees 
 - https://pubmed.ncbi.nlm.nih.gov/9183526/
 - Full article for free: 
-    - https://academic.oup.com/bioinformatics/article-pdf/13/3/235/1170463/13-3-235.pdf﻿
+    - https://academic.oup.com/bioinformatics/article-pdf/13/3/235/1170463/13-3-235.pdf
+    
+    
 
-### Biology
+##### Biology
 https://en.wikipedia.org/wiki/Phylogenetics
-
-### Bioinformatics
+##### Bioinformatics
 https://en.wikipedia.org/wiki/Bioinformatics
 
 
