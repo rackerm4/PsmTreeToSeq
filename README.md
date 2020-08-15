@@ -31,20 +31,12 @@ $ docker run pspTSGen --profile default --num_runs <N> --schema newick --output 
 
 Arg | Notes
 ------- | --------
---profile/-p    |
---num_runs/-n   |
---schema/-s |
---output/-o |
+--profile/-p    | Choosing parameters file (config): no specification of parameters will result in randomized values
+--num_runs/-n   | Enter number of trees you want simulate
+--schema/-s | tree schema (newick, nexus..)
+--output/-o | specify output directory
 
 [`default.yaml`]
-Arg | Notes
-
-Arg | Notes
-------- | --------
---profile/-p    | Choosing parameters file (config): no specification of parameters will result in randomized values
---num_runs/-n   | 
---schema/-s |
---output/-o |
 
 ## Work to be done
 - Seq-Gen installation into Dockerfile
