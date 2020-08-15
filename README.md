@@ -3,8 +3,6 @@ Pipeline using DendroPy & Seq-Gen.
 
 Simulates pyhlogentic trees with protracted speciation model, using Seq-Gen to simulate the evolution of nucleotide or amino acid sequences along those phylogenies.
 
-**Start here**: [`main.py`]
-
 Status: Currently not working.
 
 ## Background
@@ -27,8 +25,7 @@ $ docker run pspTSGen --profile default --num_runs <N> --schema newick --output 
 * Seq-Gen==xxxx
 
 ### Arguments
-**Start here**: [`main.py`]
-
+[`main.py`]
 Arg | Notes
 ------- | --------
 --profile/-p    | Choosing parameters file (config): no specification of parameters will result in randomized values
