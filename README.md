@@ -22,6 +22,8 @@ $ docker run pspTSGen --profile default --num_runs <N> --schema newick --output 
 * PyYAML==5.3.1
 * Seq-Gen==xxxx
 
+(Will be installed by pip in Docker)
+
 ### Arguments
 [`main.py`]
 Arg | Notes
