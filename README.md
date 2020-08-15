@@ -33,8 +33,6 @@ Arg | Notes
 --schema/-s | tree schema (newick, nexus..)
 --output/-o | specify output directory
 
-[`default.yaml`]
-
 ## Work to be done
 - Seq-Gen installation into Dockerfile
 - Passing Seq-Gen parameter from default config
