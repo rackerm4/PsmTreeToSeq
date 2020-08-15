@@ -10,8 +10,6 @@ Status: Currently not working.
 
 ### Installation & Docker
 
-Install the dependencies
-
 ```sh
 $ git clone https://github.com/rackerm4/pspTSGen
 $ docker build -t pspTSGen .
