@@ -60,8 +60,10 @@ The reconstructed tree in the lineage-based model of protracted speciation
 - https://pubmed.ncbi.nlm.nih.gov/24615006/
 
 ### Seq-gen-related publications
-Seq-Gen: an application for the Monte Carlo simulation of DNA sequence evolution along phylogenetic trees - https://pubmed.ncbi.nlm.nih.gov/9183526/
-  - Full article for free: https://academic.oup.com/bioinformatics/article-pdf/13/3/235/1170463/13-3-235.pdf﻿
+Seq-Gen: an application for the Monte Carlo simulation of DNA sequence evolution along phylogenetic trees 
+- https://pubmed.ncbi.nlm.nih.gov/9183526/
+- Full article for free: 
+    - https://academic.oup.com/bioinformatics/article-pdf/13/3/235/1170463/13-3-235.pdf﻿
 
 ### Biology
 https://en.wikipedia.org/wiki/Phylogenetics
