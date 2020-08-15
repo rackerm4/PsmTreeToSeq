@@ -34,7 +34,7 @@ Arg | Notes
 --output/-o | specify output directory
 
 ## Work to be done
-- Seq-Gen installation into Dockerfile
+- Seq-Gen installation via Dockerfile
 - Passing Seq-Gen parameter from default config
 - randomized Seq-Gen parameters
 - several testing:
