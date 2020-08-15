@@ -49,7 +49,7 @@ Arg | Notes
 ### How does it work
 
 ## Resources
-### psp-related publications
+### Protracted speciation model-related publications
 Estimating the duration of speciation from phylogenies  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262007/
 
 Prolonging the past counteracts the pull of the present: protracted speciation can explain observed slowdowns in diversification - https://pubmed.ncbi.nlm.nih.gov/21873376/
