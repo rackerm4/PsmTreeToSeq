@@ -100,7 +100,7 @@ Seq-Gen: an application for the Monte Carlo simulation of DNA sequence evolution
 
 ##### :microscope: Biology
 https://en.wikipedia.org/wiki/Phylogenetics
-##### Bioinformatics
+##### :computer: Bioinformatics
 https://en.wikipedia.org/wiki/Bioinformatics
 
 
