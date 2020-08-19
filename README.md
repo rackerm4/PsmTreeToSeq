@@ -1,11 +1,11 @@
-# PsmTreeToSeq-nf
+# PsmTreeToSeq
 Pipeline using DendroPy & Seq-Gen.
 
 Simulates pyhlogentic trees with protracted speciation model, using Seq-Gen to simulate the evolution of nucleotide sequences along those phylogenies.
 
 Status: Currently not working properly. Check "Work to be done"
 
-## Background
+## :thought_balloon: Background
 
 
 ### Installation & Docker
@@ -26,7 +26,7 @@ $ pip install dendropy (or install module, see above)
 $ cd PsmTreeToSeq
 $ python main.py --schema nexus -config default --output Dir --num_runs <N>
 ```
-## Requirements
+## :wrench: Requirements
 
 * DendroPy==4.4.0
 * future==0.18.2
@@ -44,7 +44,7 @@ Arg | Notes
 --schema/-s | Tree schema (newick, nexus..)
 --output/-o | Specify output directory
 
-## Work to be done
+## :bulb: Work to be done
 - save parameters of generated tree and ignore failed runs -> see Knows issues
 - Passing Seq-Gen parameter from default config 
 - randomized Seq-Gen parameters
@@ -66,13 +66,13 @@ $ docker: Got permission denied while trying to connect to the Docker daemon soc
 try
 $ sudo chmod 666 /var/run/docker.sock
 ```
-## Open questions
+## :question: Open questions
 - Big data runtime
 - Number of digits after the decimal point for random values
 
 ### How does it work
 
-## Resources
+## :books: Resources
 - DendroPy - Phylogenetic Computing Library:
     - https://dendropy.org/
 - Seq-Gen - Program simulating the evolution of nucleotide or amino acid sequences along a phylogeny
