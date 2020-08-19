@@ -79,8 +79,6 @@ $ sudo chmod 666 /var/run/docker.sock
     - https://dendropy.org/
 - Seq-Gen - Program simulating the evolution of nucleotide or amino acid sequences along a phylogeny
     - http://tree.bio.ed.ac.uk/software/seqgen/
-- Nextflow - Data-driven computational pipelines 
-    - https://www.nextflow.io/
 
 ### Protracted speciation model-related publications
 Estimating the duration of speciation from phylogenies  
