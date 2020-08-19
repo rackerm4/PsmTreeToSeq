@@ -1,16 +1,24 @@
-FROM python:3.8
+FROM phusion/baseimage:latest
 
 # Make directory for app
-WORKDIR /app
-
-# ################################# SEQ GEN
+WORKDIR /psm/
 
 # Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y \
+		git \
+		seq-gen \
+		python \
+		python-pip \
+		samtools \
+	&& pip install dendropy \
+	&& pip install -r requirements.txt \
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/*
 
-# Copy sources
-COPY . .
+# Clone git
+RUN git clone https://github.com/rackerm4/PsmTreeToSeq.git
 
-# Set entrypoint to pass arguments
-ENTRYPOINT ["python", "/app/src/main.py"]
+# Create env
+ENV PATH $PATH:/psm/PsmTreeToSeq/
+
+ENTRYPOINT ["python", "/app/main.py"]

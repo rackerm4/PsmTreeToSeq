@@ -11,32 +11,39 @@ generate_sample:
   num_extant_orthospecies:
   num_extant_lineages:
   is_retry_on_total_extinction:
-  max_retries:
+  max_retries: 4
+
 
 seq-gen:
-  state_freqs: [0.4, 0.4, 0.1, 0.1]
-  general_rates: [0.8, 0.4, 0.4, 0.2, 0.2, 0.1]
-  MODEL:
-  SEQUENCE_LENGTH:
-  NUMBER_OF_DATASETS:
-  NUMBER_OF_PARTITIONS:
-  -sSCALE:
-  -dSCALE:
-  CODON_POSITION_RATES:
-  ALPHA:
-  NUM_CATEGORIES:
-  PROPORTION_INVARIABLE:
-  STATE_FREQUENCIES:
-  TRANSITION_TRANSVERSION_RATIO:
-  RATE_MATRIX_VALUES:
-  ANCESTRAL_SEQUENCE_NUMBER:
-  RANDOM_NUMBER_SEED:
-  op:                                                       # This option selects the format of the output file. The default is PHYLIP format.
-  or:                                                       # PHYLIP format.
-  on:                                                       # Relaxed PHYLIP format: PHYLIP format expects exactly 10 characters for the name (padded with spaces if the name is actually less than 10). With this option the output file can have up to 256 characters in the name, followed by a single space before the sequence. The longer taxon names are read from the tree. Some programs can read this and it keeps long taxon names.
-  of :                                                      # NEXUS format: This creates a NEXUS file which will load into PAUP. It generates one DATA block per dataset. It also includes the simulation settings as comments which will be ignored by PAUP.
-  TEXT_FILE_NAME:
-  wa:
-  wr:
-  q:
-  h:
+  # 1 => generating random number, False => False, None = None
+  state_freqs: 1 # [0.4, 0.4, 0.1, 0.1]             # specify the equilibrium frequencies of the four nucleotides or twenty amino acids
+  general_rates: 1 # [0.8, 0.4, 0.4, 0.2, 0.2, 0.1] # set values for the relative rate of substitutions between nucleotide or amino acid states. This is only valid when either the (nucleotides) or (amino acids) model has been selected. Six values need be set.
+  char_model: GTR            # HKY, F84, GTR, JTT, WAG, PAM, BLOSUM, MTREV, CPREV or GENERAL
+  seq_len:                # allows to set the length in nucleotides or amino acids that each simulated sequence should be.
+  # NUMBER_OF_DATASETS:    # specifies how many separate datasets should be simulated for each tree in the tree file.
+  num_partitions:         # specifies how many partitions of each data set should be simulated
+  scale_branch_lens:      # set a value with which to scale the branch lengths in order to make them equal the expected number of substitutions per site for each branch.
+  scale_tree_len:         # set a value which is the desired length of each tree in units of subsitutions per site
+  codon_pos_rates:        # may specify the relative rates for each codon position
+  gamma_shape:            # may specify a shape for the gamma rate heterogeneity called alpha
+  gamma_cats:             # may specify the number of categories for the discrete gamma rate heterogeneity model
+  prop_invar:              # may specify the proportion of sites that should be invariable. Real number >= 0.0 and <1.0 that specifies the proportion of invariable sites.
+  ti_tv: 0.5 #0.5                  # default is 0.5 # = kappa of 1.0, i.e. JC
+  output_text_append:      # option allows to specify text file which will be inserted into the output file after every dataset
+  write_site_rates: False       # option allows to obtain the relative rate of substitution for each site as used in each simulation.
+  write_ancestral_seqs: False   # allows the user to obtain the sequences for each of the internal nodes in the tree. The sequences are written out along with the sequences for the tips of the tree in relaxed PHYLIP format (see above).
+  ancestral_seq_idx:       # allows to use a supplied sequence as the ancestral sequence at the root (otherwise a random sequence is used).
+  rng_seed:                # allows to specify a seed for the random number generator. Using the same seed (with the same input) will result in identical simulated datasets.
+
+  # on: # Relaxed PHYLIP format: PHYLIP format expects exactly 10 characters for the name (padded with spaces if the name is actually less than 10). With this option the output file can have up to 256 characters in the name, followed by a single space before the sequence. The longer taxon names are read from the tree. Some programs can read this and it keeps long taxon names.
+  # q:  # option prevents any output except the final trees and any error messages.
+
+  # todo:
+  # check if all arguments are correct with source of dendropy seqgen at
+  # https://github:com/jeetsukumaran/DendroPy/blob/main/src/dendropy/interop/seqgen.py
+
+  # All values below are not supported by Dendropys interop Seq-Gen
+  # op: # This option selects the format of the output file. The default is PHYLIP format.
+  # or: # PHYLIP format.
+  # of: # NEXUS format: This creates a NEXUS file which will load into PAUP. It generates one DATA block per dataset. It also includes the simulation settings as comments which will be ignored by PAUP.
+  # h:  # option prints a help message describing the options and then quits.
