@@ -45,13 +45,15 @@ Arg | Notes
 --output/-o | Specify output directory
 
 ## :bulb: Work to be done
-- save parameters of generated tree and ignore failed runs -> see Knows issues
+- Ignore parameters of failed runs -> see Knows issues
 - Passing Seq-Gen parameter from default config 
 - randomized Seq-Gen parameters
 - several testing:
     - behavior with high tree counts & full size
     
 ## Known issues
+- Newick trees raise an error when read with Seq-Gen. Every newick tree is converted into a nexus tree. All newick tree will be deleted.
+
 - When ProtractedSpeciationProcess class raises an error, most of the time it's that error below. 
 It will be ignored and the next run will start, **but the parameters still get saved**.
 ```
