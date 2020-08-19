@@ -45,6 +45,7 @@ Arg | Notes
 --output/-o | Specify output directory
 
 ## :bulb: Work to be done
+- Dockerfile/images
 - Ignore parameters of failed runs -> see Knows issues
 - Passing Seq-Gen parameter from default config [Done]
 - randomized Seq-Gen parameters [Done]
