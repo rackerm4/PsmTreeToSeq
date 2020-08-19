@@ -46,8 +46,8 @@ Arg | Notes
 
 ## :bulb: Work to be done
 - Ignore parameters of failed runs -> see Knows issues
-- Passing Seq-Gen parameter from default config 
-- randomized Seq-Gen parameters
+- Passing Seq-Gen parameter from default config [Done]
+- randomized Seq-Gen parameters [Done]
 - several testing:
     - behavior with high tree counts & full size
     
