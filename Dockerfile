@@ -21,4 +21,4 @@ RUN git clone https://github.com/rackerm4/PsmTreeToSeq.git
 # Create env
 ENV PATH $PATH:/psm/PsmTreeToSeq/
 
-ENTRYPOINT ["python", "/app/main.py"]
+ENTRYPOINT ["python", "/psm/main.py"]

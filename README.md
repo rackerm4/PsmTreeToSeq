@@ -3,7 +3,7 @@ Pipeline using DendroPy & Seq-Gen.
 
 Simulates pyhlogentic trees with protracted speciation model, using Seq-Gen to simulate the evolution of nucleotide sequences along those phylogenies.
 
-Status: Currently not working properly. Check "Work to be done"
+Status: Currently working. Testing. Check "Work to be done"
 
 ## :thought_balloon: Background
 
@@ -45,7 +45,6 @@ Arg | Notes
 --output/-o | Specify output directory
 
 ## :bulb: Work to be done
-- Ignore parameters of failed runs -> see Knows issues
 - Passing Seq-Gen parameter from default config [Done]
 - randomized Seq-Gen parameters [Done]
 - several testing:
@@ -53,9 +52,7 @@ Arg | Notes
     
 ## Known issues
 - Newick trees raise an error when read with Seq-Gen. Every newick tree is converted into a nexus tree. All newick tree will be deleted.
-
-- When ProtractedSpeciationProcess class raises an error, most of the time it's that error below. 
-It will be ignored and the next run will start, **but the parameters still get saved**.
+- Following error:
 ```
 "_Maximum number of runs to execute in the event of prematurely-terminated simulations due to all 
 lineages going extinct. Once this number or re-runs is exceed, then TreeSimTotalExtinctionException 
