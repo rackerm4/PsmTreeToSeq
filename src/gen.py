@@ -8,7 +8,7 @@ def generate_protracted_speciation_process_values():
     rng_values = []
     n = 2  # number of digits after the decimal point
     for i in range(len(vital)):
-        rng_values.append(round(np.random.uniform(0.001, 0.25), n))
+        rng_values.append(round(np.random.uniform(0.001, 0.3), n))
     # test values below
     #return {'incipient_species_extinction_rate': 0.2, 'speciation_initiation_from_orthospecies_rate': 0.2, 'speciation_initiation_from_incipient_species_rate': 0.2, 'speciation_completion_rate': 0.2, 'orthospecies_extinction_rate': 0.2, 'aincipient_species_extinction_rate': 0.2}
     return dict(zip(vital, rng_values))

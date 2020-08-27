@@ -52,7 +52,7 @@ Arg | Notes
     - behavior with high tree counts & full size
     
 ## Known issues
-- Newick trees raise an error when read with Seq-Gen. Every newick tree is converted into a nexus tree. All newick tree will be deleted.
+- Newick trees raise an error when read with Seq-Gen. Every newick tree is converted into a nexus tree. All newick trees will be deleted.
 - Following error:
 ```
 "_Maximum number of runs to execute in the event of prematurely-terminated simulations due to all 
@@ -78,8 +78,6 @@ $ sudo chmod 666 /var/run/docker.sock
     - https://dendropy.org/
 - Seq-Gen - Program simulating the evolution of nucleotide or amino acid sequences along a phylogeny
     - http://tree.bio.ed.ac.uk/software/seqgen/
-- Nextflow - Data-driven computational pipelines 
-    - https://www.nextflow.io/
 
 ### Protracted speciation model-related publications
 Estimating the duration of speciation from phylogenies  

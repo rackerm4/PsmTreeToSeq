@@ -127,7 +127,6 @@ def call_seq_gen(args, name, seqgen_vals):
         path_to_tree = os.path.join(args.output, n)
         trees = dendropy.TreeList.get(path=path_to_tree, schema='nexus')
         s = seqgen.SeqGen()
-        d0 = s.generate(trees)
         # instruct Seq-Gen to scale branch lengths by factor of 0.1
         # note that this does not modify the input trees
         s.scale_branch_lens = 0.1
