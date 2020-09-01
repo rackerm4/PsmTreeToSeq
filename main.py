@@ -17,7 +17,6 @@ import src.cfg as c
 from src import param_writer
 
 
-
 VERSION = "0.0.1"
 
 
@@ -90,16 +89,17 @@ def file_output(trees, args, tree_names):
         os.makedirs(args.output)
     if not os.path.isdir(args.output):
         sys.exit()
+    a = temp_file_name()
     for i in range(len(trees)):
         if args.schema != 'nexus':
-            file_name = tree_names[i][:3] + '_' + temp_file_name() + "." + str(args.schema)
+            file_name = tree_names[i][:3] + '_' + a + "." + str(args.schema)
             tmp_path = os.path.join(output_dir, file_name)
             trees[i].write_to_path(tmp_path, suppress_rooting=True, suppress_edge_lengths=True,
                                    schema=args.schema)
             new_fname = convert_newick_to_nexus(args, file_name)
             re_names.append(new_fname)
         else:
-            file_name = tree_names[i][:3] + '_' + temp_file_name() + "." + str(args.schema)
+            file_name = tree_names[i][:3] + '_' + a + "." + str(args.schema)
             tmp_path = os.path.join(output_dir, file_name)
             trees[i].write_to_path(tmp_path, suppress_rooting=True, suppress_edge_lengths=True,
                                    schema=args.schema)

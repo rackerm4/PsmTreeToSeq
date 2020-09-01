@@ -9,9 +9,6 @@ def parameters_prep(generated_sample_parameters, generated_protracted_speciation
     data_dict = {**id_file, **generated_sample_parameters, **generated_protracted_speciation_process_parameters,
                  **seqgen_parameters}
     write_data_to_txt(data_dict, args.output, headers)
-    # todo:
-    # call params first, then write
-    # when n runs 4 => written 4, but 8 generated !!
 
 
 def write_data_to_txt(data_dict, output, headers):
