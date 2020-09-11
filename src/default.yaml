@@ -7,11 +7,11 @@ ProtractedSpeciationProcess:
   aincipient_species_extinction_rate:
 
 generate_sample:
-  max_time: 50
-  num_extant_orthospecies:
+  max_time: 10
+  num_extant_orthospecies: 4
   num_extant_lineages:
   is_retry_on_total_extinction:
-  max_retries: 4
+  max_retries:
 
 
 seq-gen:

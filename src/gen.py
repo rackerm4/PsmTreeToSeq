@@ -1,17 +1,15 @@
 import numpy as np
 
 
-def generate_protracted_speciation_process_values():
-    vital = ['incipient_species_extinction_rate', 'speciation_initiation_from_orthospecies_rate',
-             'speciation_initiation_from_incipient_species_rate', 'speciation_completion_rate',
-             'orthospecies_extinction_rate', 'aincipient_species_extinction_rate']
-    rng_values = []
+def generate_protracted_speciation_process_values(values):
+    config_values = {k: v for k, v in values.items() if v}
+    empty_config_values = {k: v for k, v in values.items() if not v}
     n = 2  # number of digits after the decimal point
-    for i in range(len(vital)):
-        rng_values.append(round(np.random.uniform(0.001, 0.3), n))
+    for key in empty_config_values:
+        empty_config_values[key] = round(np.random.uniform(0.001, 0.3), n)
     # test values below
-    #return {'incipient_species_extinction_rate': 0.2, 'speciation_initiation_from_orthospecies_rate': 0.2, 'speciation_initiation_from_incipient_species_rate': 0.2, 'speciation_completion_rate': 0.2, 'orthospecies_extinction_rate': 0.2, 'aincipient_species_extinction_rate': 0.2}
-    return dict(zip(vital, rng_values))
+    # return {'incipient_species_extinction_rate': 0.2, 'speciation_initiation_from_orthospecies_rate': 0.2, 'speciation_initiation_from_incipient_species_rate': 0.2, 'speciation_completion_rate': 0.2, 'orthospecies_extinction_rate': 0.2, 'aincipient_species_extinction_rate': 0.2}
+    return {**config_values, **empty_config_values}
 
 
 def generate_seq_gen_general_rates():

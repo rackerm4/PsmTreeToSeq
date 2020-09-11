@@ -38,7 +38,7 @@ def main():
     for _ in range(args.num_runs):
         # load run parameters
         generated_sample_parameters = g.gen_sample_values(config[('generate_sample')])
-        generated_protracted_speciation_process_parameters = g.generate_protracted_speciation_process_values()
+        generated_protracted_speciation_process_parameters = g.generate_protracted_speciation_process_values(config[('ProtractedSpeciationProcess')])
         seqgen_parameters = g.get_seq_gen_values(config[('seq-gen')])
         # getting trees
         get_trees = call_sample_tree(generated_sample_parameters, generated_protracted_speciation_process_parameters)
