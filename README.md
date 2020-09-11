@@ -3,7 +3,7 @@ Pipeline using DendroPy & Seq-Gen.
 
 Simulates pyhlogentic trees with protracted speciation model, using Seq-Gen to simulate the evolution of nucleotide sequences along those phylogenies.
 
-Status: Currently working. Testing. Check "Work to be done"
+Status: Currently not working. Errors while parsing parameters. Check "Work to be done"
 
 ## :thought_balloon: Background
 
@@ -45,6 +45,7 @@ Arg | Notes
 --output/-o | Specify output directory
 
 ## :bulb: Work to be done
+- Parsing ProtractedSpeciationProcess parameters from config file not working correctly.
 - Dockerfile/images
 - Passing Seq-Gen parameter from default config [Done]
 - randomized Seq-Gen parameters [Done]
