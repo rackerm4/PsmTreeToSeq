@@ -60,13 +60,7 @@ Arg | Notes
 lineages going extinct. Once this number or re-runs is exceed, then TreeSimTotalExtinctionException 
 is raised. Defaults to 1000. Set to None to never quit trying._"
 ```
-- Permission denied error? Execute permission for the files in /src/: chmod u+rwx *.py
-- If you find yourself with an error like that: 
-```
-$ docker: Got permission denied while trying to connect to the Docker daemon socket 
-try
-$ sudo chmod 666 /var/run/docker.sock
-```
+
 ## :question: Open questions
 - Big data runtime
 - Number of digits after the decimal point for random values
